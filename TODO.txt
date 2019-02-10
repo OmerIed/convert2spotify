@@ -1,0 +1,4 @@
+-----index.html-----
+1.TODO: The searches will show the playlist name (NOV18) and clicking on them will send you to the original playlist
+	     There will be a button to convert to your spotify that playlist (if the user the searched it isnt you)
+2.

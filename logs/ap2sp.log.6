@@ -1,0 +1,129 @@
+2019-01-24 23:57:03,421 ERROR: Exception on /callback/q [GET] [in c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\routes.py", line 101, in callback
+    post_request = requests.post("https://accounts.spotify.com/api/token", data=code_payload, headers=headers)
+NameError: name 'requests' is not defined
+2019-01-24 23:57:19,614 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-24 23:57:25,122 ERROR: Exception on /callback/q [GET] [in c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\routes.py", line 101, in callback
+    post_request = request.post("https://accounts.spotify.com/api/token", data=code_payload, headers=headers)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'Request' object has no attribute 'post'
+2019-01-25 00:07:23,966 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-25 00:07:30,823 ERROR: Exception on /callback/q [GET] [in c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\routes.py", line 103, in callback
+    response_data = json.loads(post_request.text)
+NameError: name 'json' is not defined
+2019-01-25 00:07:56,309 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-25 00:08:02,226 ERROR: Exception on /callback/q [GET] [in c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\routes.py", line 104, in callback
+    access_token = response_data["access_token"]
+KeyError: 'access_token'
+2019-01-25 00:09:00,185 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-25 00:09:05,939 ERROR: Exception on /callback/q [GET] [in c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\routes.py", line 105, in callback
+    access_token = response_data["access_token"]
+KeyError: 'access_token'
+2019-01-25 00:15:50,292 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-25 00:16:00,961 ERROR: Exception on /callback/q [GET] [in c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\routes.py", line 105, in callback
+    access_token = response_data["access_token"]
+KeyError: 'access_token'
+2019-01-25 00:24:31,076 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-25 00:24:39,026 ERROR: Exception on /callback/q [GET] [in c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\routes.py", line 105, in callback
+    access_token = response_data["access_token"]
+KeyError: 'access_token'
+2019-01-25 00:30:50,252 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-25 00:32:25,623 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]

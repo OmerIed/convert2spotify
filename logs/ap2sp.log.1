@@ -1,0 +1,88 @@
+2019-01-30 09:49:39,527 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:44]
+2019-01-30 09:50:17,954 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:44]
+2019-01-30 10:19:57,275 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:46]
+2019-02-02 15:35:50,779 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:51]
+2019-02-03 18:16:02,836 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:51]
+2019-02-03 18:52:25,640 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:51]
+2019-02-03 18:55:14,443 ERROR: Exception on /index [POST] [in c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\routes.py", line 23, in index
+    if form.validate_on_submit():
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask_wtf\form.py", line 101, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\wtforms\form.py", line 310, in validate
+    return super(Form, self).validate(extra)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\wtforms\form.py", line 152, in validate
+    if not field.validate(self, extra):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\wtforms\fields\core.py", line 206, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\wtforms\fields\core.py", line 226, in _run_validation_chain
+    validator(form, self)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\wtforms\validators.py", line 432, in __call__
+    message = field.gettext('Invalid URL.')
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\wtforms\fields\core.py", line 166, in gettext
+    return self._translations.gettext(string)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask_wtf\i18n.py", line 48, in gettext
+    t = _get_translations()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask_wtf\i18n.py", line 40, in _get_translations
+    dirname, [get_locale()], domain='wtforms'
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask_babel\__init__.py", line 257, in get_locale
+    rv = babel.locale_selector_func()
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py", line 24, in get_locale
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+NameError: name 'request' is not defined
+2019-02-03 18:55:58,191 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:48]
+2019-02-03 19:01:10,141 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:48]
+2019-02-03 19:01:13,353 ERROR: Exception on /index [GET] [in c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\routes.py", line 36, in index
+    searches = current_user.followed_searches().paginate(
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'followed_searches'
+2019-02-03 19:01:14,599 ERROR: Exception on /index [GET] [in c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\routes.py", line 36, in index
+    searches = current_user.followed_searches().paginate(
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'followed_searches'
+2019-02-03 19:02:25,000 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:48]

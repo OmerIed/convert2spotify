@@ -1,0 +1,132 @@
+2019-01-25 11:47:16,598 ERROR: Exception on /callback/q [GET] [in c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\urllib3\connection.py", line 344, in connect
+    ssl_context=context)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\urllib3\util\ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Program Files\Python37\lib\ssl.py", line 412, in wrap_socket
+    session=session
+  File "C:\Program Files\Python37\lib\ssl.py", line 850, in _create
+    self.do_handshake()
+  File "C:\Program Files\Python37\lib\ssl.py", line 1108, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\urllib3\util\retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\urllib3\connection.py", line 344, in connect
+    ssl_context=context)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\urllib3\util\ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Program Files\Python37\lib\ssl.py", line 412, in wrap_socket
+    session=session
+  File "C:\Program Files\Python37\lib\ssl.py", line 850, in _create
+    self.do_handshake()
+  File "C:\Program Files\Python37\lib\ssl.py", line 1108, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\routes.py", line 112, in callback
+    Convert.after_token(access_token)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\convert.py", line 113, in after_token
+    track_ids, songs_missed, songs_uncertain = Convert.searchSongs(combine, sp)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\convert.py", line 56, in searchSongs
+    found = sp.search(q=song + " " + artist ,type="track", limit=1)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\spotipy\client.py", line 339, in search
+    return self._get('search', q=q, limit=limit, offset=offset, type=type, market=market)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\spotipy\client.py", line 146, in _get
+    return self._internal_call('GET', url, payload, kwargs)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\spotipy\client.py", line 108, in _internal_call
+    r = self._session.request(method, url, headers=headers, proxies=self.proxies, **args)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\requests\adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2019-01-25 12:18:18,248 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-25 12:36:02,510 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-25 12:36:27,581 ERROR: Exception on /callback/q [GET] [in c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\spotipy\client.py", line 119, in _internal_call
+    r.raise_for_status()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\requests\models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.spotify.com/v1/users/21g6dx2y25blnvtbp55mjuray/playlists
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\routes.py", line 112, in callback
+    Convert.after_token(access_token)
+  File "C:\Users\omer\Desktop\Apple2Spotify\app\convert.py", line 111, in after_token
+    playlists = sp.user_playlist_create(username, playlist_name, public=True)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\spotipy\client.py", line 406, in user_playlist_create
+    return self._post("users/%s/playlists" % (user,), payload=data)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\spotipy\client.py", line 178, in _post
+    return self._internal_call('POST', url, payload, kwargs)
+  File "c:\users\omer\desktop\apple2spotify\venv\lib\site-packages\spotipy\client.py", line 124, in _internal_call
+    headers=r.headers)
+spotipy.client.SpotifyException: http status: 403, code:-1 - https://api.spotify.com/v1/users/21g6dx2y25blnvtbp55mjuray/playlists:
+ You cannot create a playlist for another user.
+2019-01-26 12:31:34,908 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-26 12:33:32,101 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-26 13:00:22,747 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-26 13:25:21,044 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-26 13:38:23,529 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-26 14:01:41,307 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-26 17:22:55,686 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-28 23:24:30,940 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-28 23:24:57,342 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-28 23:25:44,369 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:43]
+2019-01-28 23:59:45,297 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:44]
+2019-01-29 00:00:28,581 INFO: Apple2Spotify startup [in C:\Users\omer\Desktop\Apple2Spotify\app\__init__.py:44]
